@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inclusive Sans", sans-serif;
+}
+
+:root {
+    --EncabezadoCarpeta: #3C4A66;
+    --barraC: #082032;
+    --MenuCarpeta: #273144;
+    --InteriorCarpeta: #282828;
+    --InformacionCarpeta: #273144;
+    --pcolor1: #242c3a;
+    --pcolor2: #4c0027;
+    --pcolor5: mediumspringgreen;
+    --colorLetra1: white;
+    --colorLetra2: black;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+body>video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+    z-index: -1;
+    object-fit: cover;
+}
+
+body>video>source {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contenedor_informacion {
+    width: 100%;
+    max-width: 80%;
+    position: relative;
+    background: rgb(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: minmax(auto , 1fr);
+    grid-template-rows: auto minmax(auto , 1fr);
+    height: auto;
+}
+
+.contenedor_informacion>h1 {
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    color: white;
+    background: rgb(0, 0, 0, 0.4);
+    padding: 5px;
+}
+
+.subInfo {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 20%;
+}
+
+.subInfo>p {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.animacionbtn4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 5px 40px;
+    border: var(--pcolor3) solid 0.15em;
+    border-radius: 0.25em;
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms ease;
+    margin-top: 10px;
+    background: transparent;
+    color: var(--colorLetra1);
+}
+
+.animacionbtn4 p,
+.animacionbtn4 a {
+    z-index: 1;
+    transition: all 300ms ease;
+    text-decoration: none;
+    color: var(--colorLetra1);
+}
+
+.animacionbtn4:hover,
+.animacionbtn4 a:hover {
+    color: var(--colorLetra2);
+    transform: scale(1.1);
+    transition: all 300ms ease;
+}
+
+.animacionbtn4:active {
+    border-color: teal;
+    transform: scale(0.7);
+    transition: all 300ms ease;
+}
+
+.animacionbtn4::after,
+.animacionbtn4::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: var(--pcolor5);
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+}
+
+.animacionbtn4::before {
+    left: 0;
+    transform: translateX(-8em);
+}
+
+.animacionbtn4::after {
+    right: 0;
+    transform: translateX(8em);
+}
+
+.animacionbtn4:hover::before {
+    transform: translateX(-1em);
+}
+
+.animacionbtn4:hover::after {
+    transform: translateX(1em);
+}
+
+.animacionbtn4:active::before,
+.animacionbtn4:active::after {
+    background: teal;
+}

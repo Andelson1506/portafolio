@@ -1,0 +1,179 @@
+/* Aqui van las media query */
+
+@media screen and (max-width: 1074px) {
+  .contenedor_escritorio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    padding: 15px;
+    gap: 0%;
+    transition: all 1s ease;
+  }
+
+  .contenedor_carpetas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: wrap;
+    position: relative;
+    transition: all 1s ease;
+  }
+
+  .contenedor_carpetas > .carpeta_item {
+    margin-left: 2%;
+    margin-bottom: 20px;
+    transition: all 1s ease;
+  }
+}
+
+@media screen and (max-width: 878px) {
+  .contenedor_informacion_carpeta
+    > .subcontenedor_informacion_carpeta
+    > .sobre_mi
+    > .contenedor_logros {
+    grid-template-columns: minmax(auto, 1fr);
+    transition: all 1s ease;
+  }
+
+  .contenedor_informacion_carpeta
+    > .subcontenedor_informacion_carpeta
+    > .sobre_mi
+    > .contenedor_logros::after {
+    display: none;
+    transition: all 1s ease;
+  }
+}
+
+@media screen and (max-width: 718px) {
+  .contenedor_menu_carpeta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 160px);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    transition: all 1s ease;
+  }
+
+  .contenedor_menu_carpeta > .item_menu {
+    margin-bottom: 10px;
+    transition: all 1s ease;
+  }
+
+  .contenedor_M_I {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(auto, 1fr);
+    gap: 2%;
+    transition: all 1s ease;
+  }
+
+  .contenedor_barra {
+    justify-content: center;
+    transition: all 1s ease;
+  }
+
+  .favorito > .contenedor_favoritos {
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .contenedor_informacion_carpeta > .subcontenedor_informacion_carpeta > div {
+    padding: 3px;
+    transition: all 1s ease;
+  }
+
+  .contenedor_informacion_carpeta {
+    padding: 1%;
+    transition: all 1s ease;
+  }
+
+  .contenedor_informacion_carpeta
+    > .subcontenedor_informacion_carpeta
+    > .sobre_mi
+    > .encabezado_sobremi {
+    justify-content: center;
+    transition: all 1s ease;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .favorito > .contenedor_favoritos > .item_favorito {
+    flex-direction: column;
+    transition: all 1s ease;
+  }
+
+  .favorito > .contenedor_favoritos > .item_favorito > img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 1s ease;
+  }
+
+  .este_equipo > .contenedor_discos {
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+  }
+
+  .contenedor_areas{
+    padding: 10px;
+    transition: all 1s ease;
+  }
+
+  .contenedor_areas > .MP {
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+  }
+
+  .ajustes > .contenedor_fondos > .contenedor_items_img_F{ 
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+  }
+
+  .ajustes > .contenedor_S_Carpeta > .contenedor_todos_colores{
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+  }
+
+  .ajustes > .contendor_animaciones_carpeta > .cotenedor_d_animaciones{
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+  }
+
+  .curriculum .subcontenedor_curriculum{
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+  }
+
+  .habilidades > .contenedor_items_habilidades{
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+  }
+  
+  
+}
+
+@media screen and (max-width: 378px) {
+  .este_equipo > .contenedor_discos > .item_disco > img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    transition: all 1s ease;
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .contenedor_barra{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contenedor_barra > .windows{
+    justify-content: center;
+  }
+}
+
