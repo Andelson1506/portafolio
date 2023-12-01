@@ -779,6 +779,10 @@ body{
   margin-top: 20px;
 }
 
+.contenedor_areas > .MP > .itemMP > .contenedor_atras > button > a{
+  color: black;
+}
+
 .contenedor_areas > .MP > .itemMP > .contenedor_atras > .contenedor_img_item_MP > img{
   width: 47px;
   height: 47px;
