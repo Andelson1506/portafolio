@@ -221,7 +221,6 @@ body{
   flex-direction: column;
 }
 
-/* This is an example, feel free to delete this code */
 .tooltip-container {
   --background: #333333;
   --color: #e8e8e8;
