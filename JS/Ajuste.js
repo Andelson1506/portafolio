@@ -1,3 +1,14 @@
+/* animacion de carga */
+
+let contenedor_loader = document.querySelector(".contenedor_loader");
+setTimeout(() => {
+  contenedor_loader.classList.add("contenedor_loader3");
+  setTimeout(() => {
+    let contenedor_padre500 = document.querySelector(".contenedor_padre");
+    contenedor_padre500.removeChild(contenedor_loader);
+  } , 3000);
+} , 10000);
+
 /* Funcionalidad de Ajustes */
 
 /* Video */
