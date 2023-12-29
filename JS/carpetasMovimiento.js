@@ -126,41 +126,40 @@ elementosBtnM2.forEach((item) => {
     /* haora voy a seleccionar todos las carpetas para hacer una 
       animacion en conjunto */
 
-      let referenciaA = document.querySelector(".controles_carpeta").children[0];
-      let elementI = document.querySelectorAll(".cardinfo");
-      let elementIS = Array.from(elementI);
-  
-      elementIS.forEach((item) => {
-        if (referenciaA.innerHTML == 1) {
-          item.classList.toggle("inicial");
-          item.classList.remove("ARX");
-          item.classList.remove("ARY");
-          item.classList.remove("AE");
-        } else if (referenciaA.innerHTML == 2) {
-          item.classList.remove("inicial");
-          item.classList.toggle("ARX");
-          item.classList.remove("ARY");
-          item.classList.remove("AE");
-        } else if (referenciaA.innerHTML == 3) {
-          item.classList.remove("inicial");
-          item.classList.remove("ARX");
-          item.classList.toggle("ARY");
-          item.classList.remove("AE");
-        } else if (referenciaA.innerHTML == 4) {
-          item.classList.remove("inicial");
-          item.classList.remove("ARX");
-          item.classList.remove("ARY");
-          item.classList.toggle("AE");
-        }
-      });
-  
-      let padre2 = document.querySelector(".subcontenedor_informacion_carpeta");
-      padre2.classList.add("EscalaMinima");
-  
-      setTimeout(() => {
-        padre2.classList.remove("EscalaMinima");
-      }, 1000);
-      
+    let referenciaA = document.querySelector(".controles_carpeta").children[0];
+    let elementI = document.querySelectorAll(".cardinfo");
+    let elementIS = Array.from(elementI);
+
+    elementIS.forEach((item) => {
+      if (referenciaA.innerHTML == 1) {
+        item.classList.toggle("inicial");
+        item.classList.remove("ARX");
+        item.classList.remove("ARY");
+        item.classList.remove("AE");
+      } else if (referenciaA.innerHTML == 2) {
+        item.classList.remove("inicial");
+        item.classList.toggle("ARX");
+        item.classList.remove("ARY");
+        item.classList.remove("AE");
+      } else if (referenciaA.innerHTML == 3) {
+        item.classList.remove("inicial");
+        item.classList.remove("ARX");
+        item.classList.toggle("ARY");
+        item.classList.remove("AE");
+      } else if (referenciaA.innerHTML == 4) {
+        item.classList.remove("inicial");
+        item.classList.remove("ARX");
+        item.classList.remove("ARY");
+        item.classList.toggle("AE");
+      }
+    });
+
+    let padre2 = document.querySelector(".subcontenedor_informacion_carpeta");
+    padre2.classList.add("EscalaMinima");
+
+    setTimeout(() => {
+      padre2.classList.remove("EscalaMinima");
+    }, 1000);
   });
 });
 

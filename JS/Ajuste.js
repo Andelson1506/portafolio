@@ -7,7 +7,7 @@ setTimeout(() => {
     let contenedor_padre500 = document.querySelector(".contenedor_padre");
     contenedor_padre500.removeChild(contenedor_loader);
   } , 3000);
-} , 10000);
+} , 3000);
 
 /* Funcionalidad de Ajustes */
 
