@@ -55,7 +55,6 @@ body{
 }
 
 .contenedor_loader3{
-
   opacity: 0;
   transition: all 3s ease;
 }
@@ -327,7 +326,9 @@ body{
   overflow: hidden;
   cursor: pointer;
   max-width: 200px;
-  margin-bottom: 25px;
+  margin-bottom: 8%;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .tooltip-container > span{
@@ -793,7 +794,6 @@ body{
 }
 
 /* estilos para las dos areas */
-
 .contenedor_areas > .MP{
     width: 100%;
     position: relative;
@@ -801,146 +801,221 @@ body{
     display: grid;
     grid-template-columns: repeat(2 , minmax(auto , 1fr));
     gap: 30px;
-    grid-template-rows: repeat(2 , minmax(300px , 300px));
+    grid-template-rows: repeat(3 , minmax(300px , auto));
     transition: all 1s ease;
     height: auto;
     padding: 10px;
 }
 
-/* haora el estilos de los items de estos mismos */
+/* haora el estilos de los items de estos mismos , como tambien las cards
+informativas de los diferentes modulos */
 
 .contenedor_areas > .MP > .itemMP{
-    border-radius: 10px;
     position: relative;
     transform-style: preserve-3d;
+    perspective: 1000px;
     transition: all 500ms ease;
-    height: 300px;
+    overflow: hidden;
+    opacity: 0.050;
+    background: var(--EncabezadoCarpeta);
+    border: 3px solid rgb(80, 137, 175);
+    box-shadow: 12px 17px 51px rgb(80, 137, 175,0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    user-select: none;
 }
 
-.contenedor_areas > .MP > .itemMP > .contenedor_alante,
-.contenedor_areas > .MP > .itemMP > .contenedor_atras{
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   backface-visibility: hidden;
-   transition: all 1s ease;
-   transform-style: preserve-3d;
-   border-radius: 10px;
-   overflow: hidden;
+.contenedor_areas > .MP > .itemMP:hover {
+  transform: scale(1.02);
+  opacity: 1;
 }
 
-.contenedor_areas > .MP > .itemMP > .contenedor_alante{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  background: var(--InformacionCarpeta);
-  padding: 10px;
-  box-shadow: 2px 2px 2px black;
-  filter: blur(5px);
-}
-
-.contenedor_areas > .MP > .itemMP > .contenedor_alante:hover{
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP{
+  position: relative;
+  left: 100%;
   transition: all 500ms ease;
-  top: -5px;
-  background: var(--EncabezadoCarpeta);
-  box-shadow: 0px 0px 10px black;
-  filter: blur(0px);
-  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+  height: 101%;
+  background: rgb(80, 137, 175,0.5);
 }
 
-.contenedor_areas > .MP > .itemMP > .contenedor_alante:hover h2{
-  transform: translateZ(100px) scale(1.01);
+.contenedor_areas > .MP > .itemMP:hover .contenedor_info_MP{
+  left: 0%;
   transition: all 500ms ease;
 }
 
-.contenedor_areas > .MP > .itemMP > .contenedor_alante > h2{
-  font-size: 27px;
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > h2{
+  width: 100%;
   color: white;
+  margin-bottom: 10px;
+  text-align: start;
+  font-size: 30px;
+  transition: all 500ms ease;
+  background: rgb(0,0,0,0.5);
+}
+
+.contenedor_areas > .MP > .itemMP:hover .contenedor_info_MP h2{
+  padding: 5px;
+  transition: all 500ms ease;
+}
+
+.contenedor_areas > .MP > .itemMP > img{
+  transition: all 500ms ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.3);
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.contenedor_areas > .MP > .itemMP:hover img{
+  transform: scale(1);
+  transition: all 500ms ease;
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > p{
+  color: white;
+  text-align: start;
+  font-size: 18px;
   margin-bottom: 20px;
   transition: all 500ms ease;
 }
 
-.contenedor_areas > .MP > .itemMP > .contenedor_alante > button{
-  max-width: 60%;
-  margin: 0 auto;
+.contenedor_areas > .MP > .itemMP:hover .contenedor_info_MP p{
+  margin-left: 20px;
+  transition: all 500ms ease;
+  transform: scale(1.010);
 }
 
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > hr{
+  max-width: 90%;
+  height: 2px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin: 15px auto;
+}
 
-.contenedor_areas > .MP > .itemMP > .contenedor_atras{
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > .contenedor_lenguajes_MP{
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px 20px;
-  z-index: 2;
+  justify-content: start;
 }
 
-.contenedor_areas > .MP > .itemMP > .contenedor_atras > p{
-  transition: all 1s ease;
-  background: rgb(0,0,0,0.5);
-  color: white;
-  font-size: 18px;
-  box-shadow: 0px 0px 5px black;
-  max-width: 70%;
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > .contenedor_lenguajes_MP > img{
+  width: 45px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  transform: scale(1.1);
 }
 
-.contenedor_areas > .MP > .itemMP > .contenedor_atras > img{
+/* boton de la card */
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button  {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  transition: all 500ms ease;
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button .shadow {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  transition: all 2s ease;
-  object-fit: cover;
+  border-radius: 12px;
+  background: hsla(0, 7%, 55%, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 }
 
-.contenedor_areas > .MP > .itemMP > .contenedor_atras > .contenedor_img_item_MP{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: wrap;
-  margin-top: 20px;
-}
-
-.contenedor_areas > .MP > .itemMP > .contenedor_atras > button > a{
-  color: black;
-}
-
-.contenedor_areas > .MP > .itemMP > .contenedor_atras > .contenedor_img_item_MP > img{
-  width: 47px;
-  height: 47px;
-  margin-right: 20px;
-  transition: all 2s ease;
-}
-
-.contenedor_areas > .MP > .itemMP > .contenedor_atras > span{
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button .edge {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  background: red;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsla(0, 10%, 84%, 0.5);
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button .front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
   color: white;
+  background: hsl(0, 0%, 100%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button:hover {
+  filter: brightness(110%);
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button >
+  .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button:active
+  .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button:hover
+  .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button:active
+  .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.contenedor_areas > .MP > .itemMP > .contenedor_info_MP > button > .front > a{
   font-size: 18px;
-  border-bottom: 4px solid rgb(146, 32, 32);
-  padding: 10px;
-  border-radius: 10%;
-  transition: all 400ms ease;
-  cursor: pointer;
-  transform-style: preserve-3d;
+  color: black;
+  text-decoration: none;
 }
-
-.contenedor_areas > .MP > .itemMP > .contenedor_atras > span:hover{
-  transition: all 400ms ease;
-  box-shadow: 0px 0px 5px red;
-}
-
-.contenedor_areas > .MP > .itemMP > .contenedor_atras > span:active{
-  transform: scale(0.8);
-}
+/* fin del boton de la card */
+/* Fin de los items de estos mismos , como tambien las cards
+informativas de los diferentes modulos */
 
 /* -------- estilos para el contenedor de este equipo --------------------- */
 

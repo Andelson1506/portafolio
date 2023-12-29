@@ -21,8 +21,8 @@
   }
 
   .contenedor_carpetas > .carpeta_item {
-    margin-left: 2%;
-    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-bottom: 30px;
     transition: all 1s ease;
   }
 }
@@ -54,6 +54,27 @@
     gap: 10px;
     padding: 10px;
     transition: all 1s ease;
+  }
+
+  .tooltip-container > span:nth-child(1){
+    display: none;
+  }
+
+  .tooltip-container > span:last-child{
+    transform: scale(1);
+    transition: all 600ms ease;
+  }
+
+  .tooltip-container > span{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tooltip-container > span > img{
+    margin-right: 0px;
+    margin-bottom: 5px;
   }
 
   .contenedor_menu_carpeta > .item_menu {

@@ -176,13 +176,13 @@
 }
 
 .giro1{
-  transform: scale(0);
+  transform: scale(0) translateX(-150px);
   transition: all 1s ease;
 }
 
 .actioncard > .contenedor_alante{
   transition: all 1s ease;
-  transform: scale(0);
+  transform: scale(0) translateX(-150px);
 }
 
 .back{
