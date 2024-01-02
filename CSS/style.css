@@ -1467,6 +1467,7 @@ informativas de los diferentes modulos */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: end;
 }
 
 .contenedor_barra > .creditos .sub_contenedor_info{
@@ -1474,6 +1475,8 @@ informativas de los diferentes modulos */
   align-items: center;
   position: relative;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor_barra > .creditos .sub_contenedor_info > p{
@@ -1481,6 +1484,7 @@ informativas de los diferentes modulos */
   color: var(--colorLetra3);
   flex-shrink: 0;
   width: 100%;
+  text-align: center;
   transition: all 400ms ease;
 }
 
