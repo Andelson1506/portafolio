@@ -1,0 +1,112 @@
+.archivo > .buscador{ 
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto minmax(auto , 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: var(--color3);
+  margin-top: 20px;
+
+  > img{
+    width: 50px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  > input{
+    font-size: 18px;
+  }
+}
+
+.archivo > .lita_documentos{
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  overflow: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  > table{
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+    background: var(--color3);
+    padding: 10px;
+
+    > thead{
+      background: var(--color2);
+    }
+
+    > tbody{
+      > tr > th{
+        background: var(--color1);
+      }
+    }
+  }
+
+  > table th{
+    text-align: left;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+
+    > a{
+      text-decoration: none;
+      color: white;
+    }
+
+    > a:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+/* adaptador */
+@media screen and (max-width: 586px) {
+  .archivo > .buscador{ 
+    grid-template-columns: none;
+    grid-template-areas: "texto texto"
+                         "img1 img2";
+
+  
+    > img{
+      grid-area: img1;
+    }
+  
+    > input{
+      grid-area: texto;
+    }
+
+    > button{
+      grid-area: img2;
+    }
+  }  
+}
+
+@media screen and (max-width: 358px) {
+  .archivo > .buscador{ 
+    grid-template-areas: "texto texto"
+    "img2 img2";
+
+    > img{
+      display: none;
+    }
+
+    input{
+      width: 100%;
+    }
+
+    > button{
+      width: 100%;
+    }
+  }  
+}

@@ -1,0 +1,150 @@
+header{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(auto , 1fr) auto;
+    background: var(--color2);
+    padding: 0px 15px;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 3px var(--color3);
+    z-index: 3;
+}
+
+/* tads del header */
+header > nav{
+   position: relative;
+   height: auto;
+   width: 98%;
+   overflow: hidden;
+
+   > ul{
+        list-style: none;
+        position: relative;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        
+        > li{
+            padding: 10px 15px;
+            color: white;
+            cursor: pointer;
+            width: max-content;
+            gap: 15px;
+            margin-top: 5px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: relative;
+            max-width: 250px;
+            width: 0;
+            flex-grow: 1;
+            overflow: hidden;
+            transition: all 300ms ease;
+            display: grid;
+            grid-template-columns: minmax(auto , 32px) minmax(auto , 160px) minmax(auto , 22px);
+            align-items: center;
+
+            > img{
+                width: 32px;
+                aspect-ratio: 1/1;
+                font-size: 25px;
+                position: relative;
+                background-size: cover;
+            }
+
+            > p{
+                font-size: 22px;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                white-space: nowrap;
+                max-width: 160px;
+                overflow: hidden;
+            }
+        
+
+            > img:nth-child(3){
+                width: 22px;
+                aspect-ratio: 1/1;
+                border-radius: 100%;
+                background: url(../IMG/x.png);
+                background-size: cover;
+                transition: all 200ms linear;
+                z-index: 2;
+            }
+
+            > img:nth-child(3):hover{
+                width: 25px;
+                transition: all 200ms linear;
+                cursor: pointer;
+            }
+
+            > img:nth-child(3):active{
+                width: 20px;
+            }
+        }
+
+        > li:nth-child(n+2)::after{
+            left: 0;
+            border: 2px solid var(--color1);
+            height: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 5px;
+        }
+
+        > li:hover{
+            background: var(--color1);
+            transition: all 300ms ease;
+        }
+   }
+}
+
+/* btn del menu */
+header > article > img{
+    transition: all 200ms linear;
+    width: 32px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    position: relative;
+}
+
+header > article > img:hover{
+    width: 40px;
+    padding: 5px;
+    background: var(--color1);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 200ms linear;
+    box-shadow: 0px 0px 5px var(--color1);
+}
+
+header > article > img:active{
+    width: 37px;
+}
+
+
+
+@media screen and (max-width: 546px) {
+    /* tads del header */
+    header > nav{
+       overflow: hidden;
+    
+       > ul{
+            width: 100%;
+            flex-shrink: 0;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            > li{
+                max-width: 210px;
+                width: max-content;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+

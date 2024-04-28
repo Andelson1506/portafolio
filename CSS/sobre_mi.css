@@ -1,0 +1,354 @@
+/* --------------- estilos de sobre mi ----------------------------- */
+
+/* banner */
+.sobre_mi>.banner {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2 , minmax(auto , 1fr));
+    justify-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    > figure {
+        position: relative;
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+        max-width: 350px;
+
+        >img {
+            width: 100%;
+            max-width: 350px;    
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 10px 10px 3px rgb(255, 255, 255,0.5);
+        }
+    }
+}
+
+.sobre_mi>.banner>.info_banner {
+    >h4 {
+        font-size: 40px;
+        color: var(--color1);
+    }
+
+    >h2 {
+        font-size: 40px;
+        color: white;
+        text-shadow: 2px 2px 2px rgb(63, 59, 59),
+            2px 4px 2px rgb(63, 59, 59),
+            2px 6px 2px rgb(63, 59, 59);
+    }
+
+    >h3 {
+        font-size: 35px;
+        color: white;
+        text-shadow: 2px 2px 2px rgb(63, 59, 59),
+            2px 4px 2px rgb(63, 59, 59),
+            2px 6px 2px rgb(63, 59, 59);
+    }
+
+    >h5 {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    p {
+        font-size: 20px;
+        color: white;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+}
+
+/* estilos del contenedor de logros */
+.contenedor_logros {
+    margin-top: 100px;
+    > h2{
+        font-size: 60px;
+        color: white;
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+}
+
+.contenedor_logros>.sub_contenedor_logros {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-rows: repeat(3, auto);
+    gap: 50px;
+    margin-top: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor_logros>.sub_contenedor_logros>.item_logro {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--borde_negro);
+    position: relative;
+    transition: all 400ms ease;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: var(--color2);
+    border: 5px solid var(--color3);
+    display: grid;
+    grid-template-rows: auto auto minmax(auto , 1fr);
+
+    > span{
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+        border-radius: 10px;
+        margin-top: 15px;
+        background-position: center center;
+        overflow: hidden;
+        position: relative;
+
+        > img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.1);
+            transition: all 400ms ease;
+        }
+    }
+    
+}
+
+.contenedor_logros>.sub_contenedor_logros>.item_logro:hover {
+    transform: scale(1.020) translateY(-10px);
+    box-shadow: 10px 10px 5px var(--color5);
+    transition: all 400ms ease;
+
+    > .titulo{
+        transform: scale(1.020) translateY(-2px);
+        transition: all 400ms ease;
+    }
+
+    > p{
+        transform: scale(1.020) translateY(-2px);
+        transition: all 400ms ease;
+    }
+
+    > span > img{
+        transform: scale(1) translateY(-2px);
+        transition: all 400ms ease;
+    }
+}
+
+.contenedor_logros>.sub_contenedor_logros>.item_logro:hover::after {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -7.6%;
+    transition: all 300ms ease;
+}
+
+.contenedor_logros>.sub_contenedor_logros>.item_logro>.titulo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 10px;
+    transition: all 400ms ease;
+}
+
+.contenedor_logros>.sub_contenedor_logros>.item_logro>.titulo>h3 {
+    font-size: 30px;
+    color: white;
+}
+
+.contenedor_logros>.sub_contenedor_logros>.item_logro>p {
+    font-size: 20px;
+    color: white;
+    transition: all 400ms ease;
+    text-align: justify;
+}
+
+/* lenguajes */
+
+.sobre_mi>.lenguajes {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sobre_mi>.lenguajes>h2 {
+    font-size: 50px;
+    color: white;
+    margin-left: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.sobre_mi>.lenguajes>h2::after {
+    width: 30px;
+    height: 5px;
+    border-radius: 10px;
+    top: 50%;
+    background: white;
+    left: -30%;
+}
+
+.sobre_mi>.lenguajes>h2::before {
+    width: 30px;
+    height: 5px;
+    border-radius: 10px;
+    top: 50%;
+    background: white;
+    right: -30%;
+}
+
+.sobre_mi>.lenguajes>.contenedor_lenguajes {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.sobre_mi>.lenguajes>.contenedor_lenguajes>img {
+    width: 74px;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    margin-right: 20px;
+    border: 1px solid white;
+    object-fit: cover;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* estilos para el formulario de contacto de sobre mi */
+
+.contacto > h2{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* formulario */
+.contacto > .form{
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: 
+      "t1 t2"
+      "t3 t3"
+      "t4 t4"
+      "t5 t5";  
+    position: relative;
+    margin: 0 auto;
+    background: var(--color_tema1);
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .t1{
+    grid-area: t1;
+  }
+  .t2{
+    grid-area: t2;
+  }
+  .t3{
+    grid-area: t3;
+  }
+  .t4{
+    grid-area: t4;
+  }
+  .t5{
+    grid-area: t5;
+  }
+
+  /* adaptador */
+  @media screen and (max-width: 868px){
+    .sobre_mi>.banner {
+        display: grid;
+        grid-template-areas: "img"
+                   "parrafo";
+        grid-template-columns: none;
+        width: 100%;
+
+        > figure {
+            grid-area: img;
+            margin: 0 auto;
+            margin-bottom: 10px;
+
+            > img{
+                box-shadow: 0px 10px 3px rgb(255, 255, 255,0.5);
+            }
+        }
+        
+        > .info_banner{
+            grid-area: parrafo;
+            text-align: center;
+        }
+    }
+
+    .contenedor_logros>.sub_contenedor_logros {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        padding: 30px;
+    }    
+
+    .contacto > .form{
+        width: 100%;
+        max-width: 900px;
+        padding: 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-areas: 
+          "t1 t1"
+          "t2 t2"
+          "t3 t3"
+          "t4 t4"
+          "t5 t5";  
+        position: relative;
+        margin: 0 auto;
+        background: var(--color_tema1);
+        margin-top: 20px;
+        gap: 20px;
+      }   
+  }
+
+  @media screen and (max-width: 508px){
+    .sobre_mi>.lenguajes>h2::after {
+       display: none;
+    }
+    
+    .sobre_mi>.lenguajes>h2::before {
+       display: none;
+    }
+  }
+
+  
