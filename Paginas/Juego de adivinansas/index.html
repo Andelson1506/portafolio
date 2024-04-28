@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivinansas</title>
+    <script defer src="CodigoLVL.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="desplazamiento.css">
+    <script src="https://kit.fontawesome.com/11d450d49a.js" crossorigin="anonymous"></script>
+    <script defer src="desplazamientos.js"></script>
+</head>
+<body class="body">
+
+    <!-- Video de fondo -->
+
+    <video id="fondo" muted autoplay loop>
+        <source src="img/video_P.mp4" type="video/mp4">
+    </video>
+
+        <!-- contenedor de todo , niveles , botones y barra de carga -->
+        <div class="container_all">
+
+            <!-- botones de desplazamiento comienzo -->
+            <div class="niveles">
+    
+            <button>
+                <i class="fa-solid fa-arrow-left" id="Arriba"></i>
+            </button>
+
+             <div class="sub_content">
+    
+                <div class="content content1">
+
+                    <button id="lvl1">1</button>
+                    <button id="lvl2">2</button>
+                    <button id="lvl3">3</button>
+                    <button id="lvl4">4</button>
+                    <button id="lvl5">5</button>
+                    </div>
+
+                <div class="content content2">
+
+                    <button id="lvl6">6</button>
+                    <button id="lvl7">7</button>
+                    <button id="lvl8">8</button>
+                    <button id="lvl9">9</button>
+                    <button id="lvl10">10</button>
+
+                </div>
+    
+             </div>
+             
+             <button>
+                <i class="fa-solid fa-arrow-right" id="Abajo"></i>
+             </button>
+    
+            </div>
+
+            <!-- botones de desplazamiento Final -->
+
+            <!-- Niveles del juego comienzo -->
+            <div class="juego">
+    
+                 <div class="lvl lvl1">
+    
+                    <div class="fondo">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <h1>Cuantos menos tienes, más valen, Que cosa es ?</h1>
+    
+                    <input type="text" placeholder="4 letras" id="texto1">
+                    
+                    <button id="ayuda_lvl1">Ayuda</button>
+    
+                    <button id="reiniciar">Reiniciar nivel</button>
+    
+                    <button id="verificar_1">Verificar</button>
+    
+                    <span id="Info1"><p></p>
+                    </span>
+    
+                 </div>
+    
+                 <div class="lvl lvl2">
+    
+                    <div class="fondo fondo2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <h1>El monte Everest se descubrió en 1852 ¿Cuál era la montaña más alta sobre el nivel de la tierra antes?</h1>
+    
+                    <input type="text" placeholder="12 letras" id="texto2">
+    
+                    <button id="ayuda_lvl2">Ayuda</button>
+                    <button id="reiniciar2">Reiniciar nivel</button>
+                    
+                    <button id="verificar_2">Verificar</button>
+    
+                    <span id="Info2"><p></p>
+                    </span>
+                 </div>
+    
+                 <div class="lvl lvl3">
+    
+                    <div class="fondo fondo3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <h1>¿Qué es lo que no hace preguntas, pero necesita ser contestado? , Que cosa es :</h1>
+    
+                    <input type="text" placeholder="8 palabras" id="texto3">
+    
+                        <button id="ayuda_lvl3">Ayuda</button>
+                        <button id="reiniciar3">Reiniciar nivel</button>
+             
+                    <button id="verificar_3">Verificar</button>
+    
+                    <span id="Info3"><p></p>
+                    </span>
+    
+                 </div>
+    
+                 <div class="lvl lvl4">
+    
+                    <div class="fondo fondo4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <h1>Cual es el instrumento que se mete y deja liquido dentro ?</h1>
+    
+                    <input type="text" placeholder="15 letras" id="texto4">
+                    <button id="ayuda_lvl4">Ayuda</button>
+                    <button id="reiniciar4">Reiniciar nivel</button>
+                   
+                    <button id="verificar_4">Verificar</button>
+    
+                    <span id="Info4"><p></p>
+                    </span>
+    
+                 </div>
+    
+                 <div class="lvl lvl5">
+    
+                    <div class="fondo fondo5">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <h1>¿Cuáles son las dos cosas que nadie come antes del desayuno?</h1>
+    
+                    <input type="text" placeholder="12 letras" id="texto5">
+    
+                    <button id="ayuda_lvl5">Ayuda</button>
+                    <button id="reiniciar5">Reiniciar nivel</button>
+                    
+                    <button id="verificar_5">Verificar</button>
+    
+                    <span id="Info5"><p></p>
+                    </span>
+                 </div>
+    
+                 <div class="lvl lvl6">
+    
+                    <div class="fondo fondo6">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <img src="img/6.png" alt="">
+    
+                    <input type="text" placeholder="5 numeros" id="texto6">
+                    <button id="ayuda_lvl6">Ayuda</button>
+                    <button id="reiniciar6">Reiniciar nivel</button>
+                    <button id="verificar_6">Verificar</button>
+    
+                    <span id="Info6">
+                        <p></p>
+                    </span>
+    
+                 </div>
+    
+                 <div class="lvl lvl7">
+    
+                    <div class="fondo fondo7">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <img src="img/7.jpg" alt="">
+                    <input type="text" placeholder="3 letras" id="texto7">
+                    <button id="ayuda_lvl7">Ayuda</button>
+                    <button id="reiniciar7">Reiniciar nivel</button>        
+                    <button id="verificar_7">Verificar</button>
+    
+                    <span id="Info7">
+                        <p></p>
+                    </span>
+    
+                 </div>
+    
+                 <div class="lvl lvl8">
+    
+                    <div class="fondo fondo8">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <img src="img/8.jpg" alt="">
+    
+                    <input type="text" placeholder="5 numeros" id="texto8">
+                    <button id="ayuda_lvl8">Ayuda</button>
+                    <button id="reiniciar8">Reiniciar nivel</button>
+                    
+                    <button id="verificar_8">Verificar</button>
+    
+                    <span id="Info8">
+                        <p></p>
+                    </span>
+    
+                 </div>
+    
+                 <div class="lvl lvl9">
+    
+                    <div class="fondo fondo9">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <h1>Quien es el culpable?</h1>
+                    <img src="img/9.jpeg" alt="">
+                    <input type="text" placeholder="1 palabras" id="texto9">
+                    
+                    <button id="ayuda_lvl9">Ayuda</button>
+                    <button id="reiniciar9">Reiniciar nivel</button>
+                   
+                    <button id="verificar_9">Verificar</button>
+    
+                    <span id="Info9">
+                        <p></p>
+                    </span>
+    
+                 </div>
+    
+                 <div class="lvl lvl10">
+    
+                    <div class="fondo fondo10">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <h1>Crezco a pesar de no estar vivo. No tengo pulmones, pero para vivir necesito el aire. El agua, aunque no tenga boca, me mata , Que es ?</h1>
+    
+                    <input type="text" placeholder="5 palabras" id="texto10">
+    
+                    <button id="ayuda_lvl10">Ayuda</button>
+                    <button id="reiniciar10">Reiniciar nivel</button>
+                    
+                    <button id="verificar_10">Verificar</button>
+    
+                    <span id="Info10">
+                        <p></p>
+                    </span>
+    
+                 </div>
+            </div>
+
+            <!-- Niveles del juego final -->
+
+        <!-- Barra de carga comienzo -->
+        <footer>
+            <button id="Historia">
+            </button>
+        </footer>
+        <!-- Niveles del juego final -->
+        
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Video de fondo estilos */
+
+#fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Cuerpo de pagina estilos */
+
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* contenedor de todo , niveles , botones y barra de carga estilos */
+
+.container_all{
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: minmax(auto , 1fr);
+   grid-template-rows: auto auto auto;
+   position: relative;
+   height: auto;
+}
+
+/* Estilos de botones de desplazamiento comienzo */
+
+.container_all > .niveles{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+}
+
+.container_all > .niveles > button{
+    background: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 40px;
+    transition: all 300ms ease;
+}
+
+
+
+.container_all > .niveles > button:hover{
+    transform: scale(1.5);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.container_all > .niveles > .sub_content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container_all > .niveles > .sub_content > .content{
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_all > .niveles > .sub_content > .content > button{
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    border: none;
+    transition: all 500ms ease;
+    margin-right: 50px;
+    position: relative;
+}
+
+.container_all > .niveles > .sub_content > .content > button:hover{
+    cursor: pointer;
+    transition: all 500ms ease;
+    background: red;
+    box-shadow: 0px 0px 5px black;
+    transform: scale(0.5);
+}
+
+.container_all > .niveles > .sub_content > .content > button::after{
+    border-radius: 5px;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 1px solid red;
+    transform: scale(0.5);
+    transition: all 500ms ease;
+    opacity: 0;
+}
+
+.container_all > .niveles > .sub_content > .content > button:hover::after{
+    transform: scale(1.8);
+    transition: all 500ms ease;
+    opacity: 1;
+}
+
+/* Final de botones de desplazamiento */
+
+/* estilos de los niveles comienzo */
+
+/* Contenedor padre estilos */
+.container_all > .juego{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+/* Niveles */
+.container_all > .juego > .lvl {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255 , 255 , 255 , 0.5);
+    border-radius: 20px;
+    transition: all 500ms ease;
+}
+
+/* estilos de la evaluacion comienzo */
+
+.container_all > .juego > .lvl > span{
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    transition: all 500ms ease;
+}
+.container_all > .juego > .lvl > span > button{
+    position: absolute;
+    top: 10px;
+    padding: 10px 15px;
+    right: 10px;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.container_all > .juego > .lvl > span > button:active{
+    transform: skew(15);
+}
+
+.container_all > .juego > .lvl > span > button:hover{
+    transition: all 500ms ease;
+    background: red;
+    padding: 15px 20px;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 0px 10px red;
+}
+
+/* estilos de la evaluacion final */
+
+/* estilos de las imagenes comienzo */
+
+.container_all > .juego > .lvl > img{
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.lvl6 img{
+    width: 100%;
+    max-width: 900px;
+}
+
+.lvl7 img{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.lvl8 img{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.lvl9 img{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+/* estilos de las imagenes final */
+
+/* Mas estilos de niveles comienzo */
+.container_all > .juego > .lvl > h1{
+    max-width: 900px;
+    text-align: center;
+}
+
+.container_all > .juego > .lvl > #reiniciar,
+.container_all > .juego > .lvl > #reiniciar2,
+.container_all > .juego > .lvl > #reiniciar3,
+.container_all > .juego > .lvl > #reiniciar4,
+.container_all > .juego > .lvl > #reiniciar5,
+.container_all > .juego > .lvl > #reiniciar6,
+.container_all > .juego > .lvl > #reiniciar7,
+.container_all > .juego > .lvl > #reiniciar8,
+.container_all > .juego > .lvl > #reiniciar9,
+.container_all > .juego > .lvl > #reiniciar10{
+    z-index: 2;
+}
+
+.container_all > .juego > .lvl button:hover ,
+.container_all > .juego > .lvl > .opciones button:hover {
+    transition: all 300ms ease;
+    cursor: pointer;
+    background: darkblue;
+    border-bottom: 5px solid rgb(4, 4, 68);
+}
+
+.container_all > .juego > .lvl button:active{
+    transform: skewX(10deg);
+}
+
+.container_all > .juego > .lvl > h1{
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.container_all > .juego > .lvl > input{
+    padding: 2px;
+    width: 100%;
+    max-width: 350px;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.container_all > .juego > .lvl > .opciones > button{
+  margin-left: 20px;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(54, 54, 248);
+  color: white;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.container_all > .juego > .lvl > button{
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    background: rgb(54, 54, 248);
+    color: white;
+    border: none;
+    position: relative;
+}
+
+/* animacion de cuando se gana comienzo */
+
+.container_all > .juego > .lvl > .fondo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    width: 100%;
+    background: transparent;
+}
+
+.container_all > .juego > .lvl > .fondo > span{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: 5s win infinite alternate;
+    border-radius: 10px;
+}
+
+
+@keyframes win {
+
+    from{
+        transform: rotate(0deg);
+        top: 0;
+    }to{
+        transform: rotate(360deg) scale(1.5);
+        box-shadow: 0px 0px 10px white;
+        top: 95%;
+    }
+    
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(1){
+    background: blue;
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(2){
+    background: orangered;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(3){
+    background: yellow;
+    left: 2%;
+    animation-delay: 3s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(4){
+    background: green;
+    left: 25%;
+    animation-delay: 3s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(5){
+    background: darkblue;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(6){
+    background: darkgreen;
+    left: 35%;
+    animation-delay: 5s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(7){
+    background: blue;
+    left: 45%;
+    animation-delay: 2s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(8){
+    background: greenyellow;
+    left: 55%;
+    animation-delay: 1s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(9){
+    background: purple;
+    left: 65%;
+    animation-delay: 4s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(10){
+    background: aqua;
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(11){
+    background: dodgerblue;
+    left: 82%;
+    animation-delay: 5s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(12){
+    background: darkgoldenrod;
+    left: 90%;
+    animation-delay: 2s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(13){
+    background: purple;
+    left: 65%;
+    animation-delay: 6s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(14){
+    background: aqua;
+    left: 20%;
+    animation-delay: 7s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(15){
+    background: dodgerblue;
+    left: 50%;
+    animation-delay: 6s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(16){
+    background: darkgoldenrod;
+    left: 65%;
+    animation-delay: 8s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(17){
+    background: purple;
+    left: 25%;
+    animation-delay: 9s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(18){
+    background: aqua;
+    left: 75%;
+    animation-delay: 10s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(19){
+    background: dodgerblue;
+    left: 85%;
+    animation-delay: 8s;
+}
+
+.container_all > .juego > .lvl > .fondo > span:nth-child(20){
+    background: darkgoldenrod;
+    left: 90%;
+    animation-delay: 7s;
+}
+
+/* animacion de cuando se gana final */
+
+#ayuda_lvl1,
+#ayuda_lvl2,
+#ayuda_lvl3,
+#ayuda_lvl4,
+#ayuda_lvl5,
+#ayuda_lvl6,
+#ayuda_lvl7,
+#ayuda_lvl8,
+#ayuda_lvl9,
+#ayuda_lvl10{
+    margin-bottom: 20px;
+}
+
+.lvl10 > h1{
+    max-width: 1000px;
+}
+
+.container_all > .juego > .lvl > .opciones > button:nth-child(1){
+    padding: 15px 40px;
+}
+
+/* estilos de los niveles final */
+
+/* pie de pagina estilos (barra de carga) */
+
+footer{
+    position: relative;
+    width: 100%;
+}
+
+footer > button{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+#Historia{
+    background: url(img/historia.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 500ms ease;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+/* Animaciones para jc */
+
+.blurr{
+    filter: blur(10px);
+    transition: all 500ms ease;
+}
+
+.activee{
+    transition: all 500ms ease;
+    width: 90%;
+    padding: 50px 0px;
+    background: rgb(143, 113, 13);
+}
+
+.activee2{
+    transition: all 500ms ease;
+    width: 90%;
+    padding: 80px 0px;
+}
+
