@@ -7,5 +7,22 @@ function card_proyecto() {
             contenido_oculto.classList.toggle("tamaño1");
             contenido_oculto.classList.toggle("tamaño2");
         });
+    });
+
+    // funcionalidad de busqueda (destacado) y (proyectos (normal))
+    document.addEventListener("keyup" ,(e) => {
+        if (e.target.matches("#destacado_input")){
+            document.querySelectorAll(".item_destacado").forEach((item) => {
+                item.children[0].children[1].textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()) ? item.classList.remove("foco") : item.classList.add("foco");
+            });
+        }
+
+        if (e.target.matches("#proyecto_input")){
+            document.querySelectorAll(".item_normal").forEach((item) => {
+                item.children[0].children[1].textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()) ? item.classList.remove("foco") : item.classList.add("foco");
+            });
+        }
     })
 }
+
+

@@ -95,7 +95,7 @@ function eliminar_pestaña() {
     }
 }
 
-/* funcionalidad de buscar */
+/* funcionalidad de buscar (pagina de inicio btn buscar) */
 let btn_buscar = document.getElementById("btn_buscar");
 
 btn_buscar.addEventListener("click" , () => {
@@ -131,6 +131,48 @@ btn_buscar.addEventListener("click" , () => {
         if (busqueda = 1){
             alert("no se encontraron los datos.");
             return;
+        }
+    }
+});
+
+
+/* funcionalidad de buscar (barra de url) */
+let url_input = document.getElementById("url_input");
+url_input.addEventListener("keydown" , (e) => {
+    if (e.key === "Enter"){
+        let texto_busqueda = document.getElementById("url_input");
+        if (texto_busqueda.value == null || texto_busqueda.value == ""){alert("debe escribir algo.");} else{
+            let name_modulu =  texto_busqueda.value;
+            let busqueda = 0;
+            let selec_page = 0;
+            let pages = document.getElementById("pages");
+            for (let i = 0; i < pages.children.length; i++){
+                if (pages.children[i].children[1].innerHTML == name_modulu){
+    
+                    let lista_opciones_frm3 = document.getElementById("lista_opciones_frm");
+                    for (let e = 0; e < lista_opciones_frm3.children.length; e++){
+    
+                        if (lista_opciones_frm3.children[e].children[1].innerHTML == name_modulu){
+                            lista_opciones_frm3.children[e].click();
+                            return;
+                        } else {
+                            selec_page = 1;
+                        }
+                    }
+                    
+                    if (selec_page = 1){
+                        pages.children[i].click();
+                        busqueda = 0;
+                        return;
+                    }
+                } else {
+                    busqueda = 1;
+                }
+            }
+            if (busqueda = 1){
+                alert("no se encontraron los datos.");
+                return;
+            }
         }
     }
 });
