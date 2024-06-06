@@ -14,439 +14,286 @@
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/adaptador.css">
 </head>
 
 <body>
-
+    <span id="btn_musica" class="btn_musica btn_musica_start"></span>
     <!--==  ==-->
+    <!--== contenedor de carga ==-->
+    <section class="contenedor_carga carga" id="carga">
+        <svg class="loader" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="loader-ring loader-ring-a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="loader-ring loader-ring-b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="loader-ring loader-ring-c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="loader-ring loader-ring-d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </section>
 
     <!--== header ==-->
     <header>
+        <section class="acciones">
+            <article>
+                <span></span>
+                <span></span>
+                <span></span>
+            </article>
+
+            <article>
+                <div class="item_img" id="btn_configuracion">
+                    <img src="IMG/configuracion.png" alt="" class="img_header_accion">
+                </div>
+
+                <div class="item_img" id="btn_desplazamiento_menu">
+                    <img src="IMG/ventana.png" alt="" class="img_header_accion">
+                </div>
+
+                <div class="item_img" id="btn_actualizar">
+                    <img src="IMG/actualizar.png" alt="" class="img_header_accion">
+                </div>
+            </article>
+        </section>
+
+        <section class="barra_navegacion">
+            <article class="url">
+                <div class="candado">
+                    <img src="IMG/candado.png" alt="">
+                </div>
+
+                <input type="text" placeholder="Buscador" list="lista_modulus" id="url_input">
+            </article>
+        </section>
+
         <section class="enlaces_paginas">
             <nav>
                 <ul id="lista_opciones_frm">
                     <li title="Inicio" id="inicio_frm_btn">
                         <img src="IMG/casa.png" alt="img_item_header">
-                         <p>Inicio</p>
-                         <img src="IMG/casa.png" alt="img_item_header" class="none">
+                        <p>Inicio</p>
+                        <img src="IMG/casa.png" alt="img_item_header" class="none">
                     </li>
                 </ul>
             </nav>
-        </section>
-        <section class="barra_navegacion">
-            <button class="scale_animacion" id="carga_btn"><img src="IMG/actualizar.png"></button>
-            <article class="url">
-
-                <div class="candado">
-                    <img src="IMG/candado.png" alt="">
-                </div>
-
-                <input type="text" id="" value="https://">
-                <input type="text" placeholder="Buscador" list="lista_modulus" id="url_input">
-
-            </article>
-            <img src="IMG/menu.png" alt="menu" id="btn_menu">
-        </section>
-        <section class="carga">  
-            <div class="socket">
-                <div class="gel center-gel">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c1 r1">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c2 r1">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c3 r1">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c4 r1">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c5 r1">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c6 r1">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                
-                <div class="gel c7 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                
-                <div class="gel c8 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c9 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c10 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c11 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c12 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c13 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c14 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c15 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c16 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c17 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c18 r2">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c19 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c20 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c21 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c22 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c23 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c24 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c25 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c26 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c28 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c29 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c30 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c31 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c32 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c33 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c34 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c35 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c36 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-                <div class="gel c37 r3">
-                    <div class="hex-brick h1"></div>
-                    <div class="hex-brick h2"></div>
-                    <div class="hex-brick h3"></div>
-                </div>
-            </div>
         </section>
     </header>
     <!-- |fin header| -->
 
     <!--== main ==-->
     <main>
+        <span id="btn_desplazamiento_menu2" class="oculto_ani_btn_menu"><img src="IMG/ventana.png" alt="" class="img_header_accion"></span>
+        <span class="indicador_movimiento" id="indicador_movimiento">1</span>
         <div class="container_all_modulus">
-            <!--== contenedor_de_configuracion ==-->
-            <section class="configuration_container scale none" id="configuration_container">
-                <article class="header">
-                    <div class="logo">
-                        <h2>Configuración del portafolio</h2>
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#S">Fondos</a></li>
-                            <li><a href="#T">Temas</a></li>
-                        </ul>
-                    </nav>
-                </article>
-
-                <article class="home_container">
-                    <h2>Fonde de pantalla de inicio</h2>
-                    <div class="home_subcontainer" id="fondo_contenedor">
-                        <div class="img"><img src="IMG/fondo4_portafolio.jpg" alt="img_fondo_inicio"></div>
-                        <div class="img"><img src="IMG/fondo6_portafolio.jpg" alt="img_fondo_inicio"></div>
-                        <div class="img"><img src="IMG/fondo3_portafolio.jpg" alt="img_fondo_inicio"></div>
-                        <div class="img"><img src="IMG/fondo2_portafolio.jpeg" alt="img_fondo_inicio"></div>
-                        <div class="img"><img src="IMG/fondo7_portafolio.jpg" alt="img_fondo_inicio"></div>
-                        <div class="img"><img src="IMG/fondo1_portafolio.jpeg" alt="img_fondo_inicio"></div>
-                    </div>
-                </article>
-
-                <article class="themes_container">
-                    <h2>Temas de colores del portafolio</h2>
-                    <div class="themes_subcontainer" id="contenedor_temas">
-                        <span class="select_color"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </article>
-            </section>
-            <!--== fin contenedor_de_configuracion ==-->
-
             <div class="container_slider_modulus" id="slider_modulus">
                 <section class="home" id="home">
                     <div class="fondo" id="fondo_home"><img src="IMG/fondo4_portafolio.jpg" alt=""></div>
-                        <h1>Portafolio</h1>
-                        <article class="buscador">
-                            <img src="IMG/lupa.png" alt="img_buscador">
-                            <input type="text" id="page_select" class="input1" placeholder="busca tu pagina" list="lista_modulus">
-                            <datalist id="lista_modulus">
-                                <option value="Sobre Mi">Sobre Mi</option>
-                                <option value="Proyectos">Proyectos</option>
-                                <option value="Archivos">Archivos</option>
-                            </datalist>
-                            <button class="btn3" id="btn_buscar">Buscar</button>
-                        </article>  
+                    <h1>Portafolio</h1>
+                    <article class="buscador">
+                        <img src="IMG/lupa.png" alt="img_buscador">
+                        <input type="text" id="page_select" class="input1" placeholder="busca tu pagina"
+                            list="lista_modulus">
+                        <datalist id="lista_modulus">
+                            <option value="Sobre Mi">Sobre Mi</option>
+                            <option value="Proyectos">Proyectos</option>
+                            <option value="Archivos">Archivos</option>
+                        </datalist>
+                        <button class="btn3" id="btn_buscar">Buscar</button>
+                    </article>
 
-                        <article class="pages" id="pages">
-                            <div class="item_page">
-                                <img src="IMG/casa.png" alt="">
-                                <p>Inicio</p>
-                            </div>
+                    <article class="pages" id="pages">
+                        <div class="item_page">
+                            <img src="IMG/casa.png" alt="">
+                            <p>Inicio</p>
+                        </div>
 
-                            <div class="item_page">
-                                <img src="IMG/Sobre Mi.png" alt="">
-                                <p>Sobre Mi</p>
-                            </div>
+                        <div class="item_page">
+                            <img src="IMG/Sobre Mi.png" alt="">
+                            <p>Sobre Mi</p>
+                        </div>
 
-                            <div class="item_page">
-                                <img src="IMG/Proyectos.png" alt="">
-                                <p>Proyectos</p>
-                            </div>
+                        <div class="item_page">
+                            <img src="IMG/Proyectos.png" alt="">
+                            <p>Proyectos</p>
+                        </div>
 
-                            <div class="item_page">
-                                <img src="IMG/Archivos.png" alt="">
-                                <p>Archivos</p>
-                            </div>
-                        </article>
+                        <div class="item_page">
+                            <img src="IMG/Archivos.png" alt="">
+                            <p>Archivos</p>
+                        </div>
+                    </article>
                 </section>
 
                 <section class="sobre_mi none" id="Sobre_Mi">
+                    <!-- Contenedor oculto (vista de publicaciones)  -->
+                    <article class="vista_publicacion inactivo_vista_publicacion" id="vista_publicacion_sm">
+                        <span class="btn6" id="btn_cerrar_vista_publicacion_sm">X</span>
+                    </article>
+                    <!-- fin contenedor oculto (vista de publicaciones)  -->
+
+                    <!-- Banner  -->
                     <article class="banner">
-                        <div class="info_banner" id="S">
-                            <h4>¿Quién soy?</h4>
-                            <h2>Soy Andelson González Genao</h2>
-                            <h3>Desarrollador Full Stack</h3>
-                            <p>
-                                Como estudiante de 17 años en el Politécnico Nuestra Señora de la Esperanza, me dedico al desarrollo de habilidades informáticas con pasión y compromiso. Mi portafolio refleja un proceso de crecimiento constante, donde cada proyecto representa un avance en mi carrera profesional. Busco innovar y encontrar soluciones eficientes en la convergencia entre la tecnología y la creatividad.
-                            </p>
-                        </div>    
-
-                        <figure>
-                            <img src="IMG/Mi foto(3).jpg" alt="img_sobre_mi" />
-                        </figure>   
+                        <img src="IMG/fondo_sobre_mi1.jpg" alt="" class="img_f">
+                        <img src="IMG/Mi foto(3).jpg" alt="img_sobre_mi" class="img_p" />
                     </article>
-    
-                    <article class="contenedor_logros" id="L">
-                        <h2>Logros</h2>
 
-                        <article class="sub_contenedor_logros">
-                            <div class="item_logro punto1" data-aos="zoom-in-up">
-                              <div class="titulo">
-                                <h3>Estudiante sobre saliente en</h3>
-                               
-                              </div>
-                              <p> Portales web, Base de datos, Análisis y Diseño de sistemas</p>
+                    <!-- contenedor de btns de accion  -->
+                    <article class="controles" id="controles_frm_sm">
+                        <p class="active">Historia</p>
+                        <p>Logros</p>
+                        <p>Tecnologias</p>
+                        <p>Contacto</p>
+                    </article>
 
-                              <span>
-                                <img src="IMG/Logro1.jpg" alt="">
-                              </span>
-                     
-                            </div>
-                    
-                            <div class="item_logro" data-aos="zoom-in-up">
-                              <div class="titulo">
-                                <h3>Certificado</h3>
-                            
-                              </div>
-                              <p>
-                                De Desarrollo y Administración de aplicaciones informaticas.
-                              </p>
-
-                              <span>
-                                <img src="IMG/Logro2.jpg" alt="">
-                              </span>
-                            </div>
-                    
-                            <div class="item_logro punto1" data-aos="zoom-in-up">
-                              <div class="titulo">
-                                <h3>Certificado</h3>
-                              </div>
-                              <p>
-                                De ofimática por completar satisfactoriamente los requisitos curriculares correspondiente al programa del cuso de ofimática 2021 - 2022.
-                              </p>
-                              
-                              <span>
-                                <img src="IMG/Logro3.jpg" alt="">
-                              </span>
-                            </div>
-                    
-                            <div class="item_logro" data-aos="zoom-in-up">
-                              <div class="titulo">
-                                <h3>Medalla</h3>
-                              </div>
-                              <p>
-                                Medalla por ser bueno en el área.
-                              </p>
-
-                              <span>
-                                <img src="IMG/Logro4.jpg" alt="">
-                              </span>
-                            </div>
-
-                            <div class="item_logro" data-aos="zoom-in-up">
-                                <div class="titulo">
-                                  <h3>Certificado</h3>
-                                </div>
+                    <!-- Contenedor de todas las secciones  -->
+                    <div class="contenedor_areas" id="areas_sm">
+                        <!-- Historia  -->
+                        <article class="historia seleted" id="historia_sm">
+                            <article class="info">
+                                <h4>¿Quién soy?</h4>
+                                <h2>Soy Andelson González Genao</h2>
+                                <h3>Desarrollador Full Stack</h3>
                                 <p>
-                                    Del itla de la mama tingo en donde complete un curso satisfactoriamente.
+                                    Como estudiante de 17 años en el Politécnico Nuestra Señora de la Esperanza, me
+                                    dedico al desarrollo de habilidades informáticas con pasión y compromiso. Mi
+                                    portafolio refleja un proceso de crecimiento constante, donde cada proyecto
+                                    representa un avance en mi carrera profesional. Busco innovar y encontrar soluciones
+                                    eficientes en la convergencia entre la tecnología y la creatividad.
                                 </p>
-  
-                                <span>
-                                    <img src="IMG/Itla.png" alt="">
-                                </span>
-                              </div>
-                          </article>
-                    </article>
-    
-                    <!-- lenguajes  -->
-                    <article class="lenguajes" id="T">
-                        <h2>Tecnologias</h2>
-                        <div class="contenedor_lenguajes">
-                        <img src="IMG/VB.png" alt="VB" />
-                        <img src="IMG/css.png" alt="CSS" />
-                        <img src="IMG/html-5.png" alt="HTML" />
-                        <img src="IMG/base-de-datos.png" alt="SQL" />
-                        <img src="IMG/mysql.png" alt="My Sql" />
-                        <img src="IMG/js.png" alt="JS" />
-                        <img src="IMG/xampp.png" alt="Xampp" />
-                        <img src="IMG/php.png" alt="PHP" />
-                        </div>
-                    </article>
-        
-                     <!-- Contenedor de contacto de sobre mi  -->
-                    <article class="contacto" id="C">
-                        <h2>Contactame aquí</h2>
-                        
-                        <form class="form" method="post" action="https://formspree.io/f/mdorrlgp">
-                            <input placeholder="Nombre" type="text" class="input1 t1" name="nombre" required data-aos="fade-up">
-                    
-                            <input placeholder="Apellido" type="text" class="input1 t2" name="apellido" required data-aos="fade-up">
-                    
-                            <input placeholder="Email" type="email" class="input1 t3" name="email" required data-aos="fade-up">
-                    
-                            <textarea data-aos="fade-up" placeholder="Mensaje" rows="10" cols="30" id="message" name="mensaje"
-                                class="input1 t4" required></textarea>
-                    
-                            <div class="button-container">
-                                <input class="btn3 t5" type="submit" value="Enviar"></input>
+                            </article>
+
+                            <article class="publicacion">
+                                <h2>Publicaciones</h2>
+                                <hr>
+
+                                <div class="item_publicacion">
+
+                                    <div class="encabezado">
+                                        <div class="contenedor_info">
+                                            <img src="IMG/Sobre Mi.png" alt="">
+                                            <div class="info">
+                                                <p>Andelson</p>
+                                                <p>6/6/2024</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="controles">
+                                            <img src="IMG/maximize.png" alt="" id="btn_visualizar_sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="detalle">
+                                        <p>
+                                            ¡Hola! Soy Andelson y quiero presentarte uno de mis proyectos: una tienda en línea creada con HTML, CSS y JavaScript. He diseñado cada detalle para ofrecer una experiencia de compra intuitiva y emocionante. ¡Descubre cómo un carrito de compras puede ser tan funcional como sorprendente! Ven y explora la magia detrás de cada clic en mi portafolio.
+                                        </p>
+
+                                        <img src="IMG/tienda_celulares2.png" alt="">
+                                    </div>
+                                </div>
+
+                            </article>
+                        </article>
+
+                        <!-- Logros  -->
+                        <article class="logros">
+                            <h3>Certificados</h3>
+                            <article class="contenedor_logros" id="L">
+                                <article class="sub_contenedor_logros">
+
+                                    <div class="item_logro punto1">
+                                        <div class="info">
+                                            <h3>Estudiante sobre saliente en</h3>
+                                            <p> Portales web, Base de datos, Análisis y Diseño de sistemas</p>
+                                        </div>
+
+                                        <img src="IMG/Logro1.jpg" alt="">
+                                    </div>
+
+                                    <div class="item_logro">
+                                        <div class="info">
+                                            <h3>Certificado</h3>
+                                            <p>
+                                                De Desarrollo y Administración de aplicaciones informaticas.
+                                            </p>
+                                        </div>
+
+                                        <img src="IMG/Logro2.jpg" alt="">
+                                    </div>
+
+                                    <div class="item_logro punto1">
+                                        <div class="info">
+                                            <h3>Certificado</h3>
+                                            <p>
+                                                De ofimática por completar satisfactoriamente los requisitos
+                                                curriculares correspondiente al programa del cuso de ofimática 2021 -
+                                                2022.
+                                            </p>
+                                        </div>
+
+                                        <img src="IMG/Logro3.jpg" alt="">
+                                    </div>
+
+                                    <div class="item_logro">
+                                        <div class="info">
+                                            <h3>Medalla</h3>
+                                            <p>
+                                                Medalla por ser bueno en el área.
+                                            </p>
+                                        </div>
+
+                                        <img src="IMG/Logro4.jpg" alt="">
+                                    </div>
+
+                                    <div class="item_logro">
+                                        <div class="info">
+                                            <h3>Certificado</h3>
+                                            <p>
+                                                Del itla de la mama tingo en donde complete un curso satisfactoriamente.
+                                            </p>
+                                        </div>
+                                        <img src="IMG/Itla.png" alt="">
+                                    </div>
+                                </article>
+                            </article>
+                        </article>
+
+                        <!-- Tecnologias  -->
+                        <article class="tecnologias">
+                            <div class="contenedor_lenguajes">
+                                <img src="IMG/VB.png" alt="VB" />
+                                <img src="IMG/css.png" alt="CSS" />
+                                <img src="IMG/html-5.png" alt="HTML" />
+                                <img src="IMG/base-de-datos.png" alt="SQL" />
+                                <img src="IMG/mysql.png" alt="My Sql" />
+                                <img src="IMG/js.png" alt="JS" />
+                                <img src="IMG/xampp.png" alt="Xampp" />
+                                <img src="IMG/php.png" alt="PHP" />
                             </div>
+                        </article>
+
+                        <!-- Contacto  -->
+                        <article class="contacto" id="C">
+                            <h2>Contactame aquí</h2>
+
+                            <form class="form" method="post" action="https://formspree.io/f/mdorrlgp">
+                                <input placeholder="Nombre" type="text" class="input1 t1" name="nombre" required
+                                    data-aos="fade-up">
+
+                                <input placeholder="Apellido" type="text" class="input1 t2" name="apellido" required
+                                    data-aos="fade-up">
+
+                                <input placeholder="Email" type="email" class="input1 t3" name="email" required
+                                    data-aos="fade-up">
+
+                                <textarea data-aos="fade-up" placeholder="Mensaje" rows="10" cols="30" id="message"
+                                    name="mensaje" class="input1 t4" required></textarea>
+
+                                <div class="button-container">
+                                    <input class="btn3 t5" type="submit" value="Enviar"></input>
+                                </div>
                             </form>
-                    </article>
+                        </article>
+                    </div>
                 </section>
-                
+
                 <section class="proyecto none" id="Proyectos">
                     <article class="banner">
                         <img src="IMG/fondo7_portafolio.jpg" alt="">
@@ -463,67 +310,76 @@
 
                     <article class="destacado" id="D">
 
-                        <div class="item_proyecto item_destacado">
-                            <div class="encabezado_item_proyecto">
+                        <div class="item_proyecto item_destacado item_proyecto_activo">
+                            <div class="front">
                                 <img src="IMG/transacciones.png" alt="">
-                                <p>Página de transacciones</p>
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>Página de transacciones</h2>
+
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/html-5.png" alt="">
                                     <img src="IMG/css.png" alt="">
                                     <img src="IMG/js.png" alt="">
                                 </div>
-                            </div>
 
-                            <div class="info_proyeto tamaño1">
-                                <p>simulación de una página de transacciones inspirada por un youtuber, pero el desarrollo fue completamente hecho por mí.</p>
-                                <button class="btn3"><a href="Paginas/Transacciones/index.html" target="_blank">Visualizar</a></button>
-                            </div>
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>simulación de una página de transacciones inspirada por un youtuber, pero el desarrollo fue completamente hecho por mí.</p>
+                                    <button class="btn3"><a href="Paginas/Transacciones/index.html"
+                                    target="_blank">Visualizar</a></button>
+                                </div>
+                            </div>  
                         </div>
 
                         <div class="item_proyecto item_destacado">
-                            <div class="encabezado_item_proyecto">
-                                <img src="IMG/tienda_celular.png" alt="">
-                                <p>Tienda de celulares</p>
+                            <div class="front">
+                                <img src="IMG/tienda_celulares2.PNG" alt="">
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>Tienda de celulares</h2>
+
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/html-5.png" alt="">
                                     <img src="IMG/css.png" alt="">
                                     <img src="IMG/js.png" alt="">
                                 </div>
-                            </div>
-                            <div class="info_proyeto tamaño1">
-                                <p>Simulación de una tienda en línea con un carrito de compras totalmente funcional.</p>
-                                <button class="btn3"><a href="Paginas/Tienda celulares Anderson/index.html" target="_blank">Visualizar</a></button>
-                            </div>
+
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>Hecho a través de Html, Css y Js. Donde cada detalle ofrecer una experiencia de compra intuitiva y emocionante.</p>
+
+                                    <button class="btn3"><a href="Paginas/Tienda celulares Anderson/index.html" target="_blank">Visualizar</a></button>
+                                </div>
+                            </div>  
                         </div>
 
                         <div class="item_proyecto item_destacado">
-                            <div class="encabezado_item_proyecto">
+                            <div class="front">
                                 <img src="IMG/red_social.png" alt="">
-                                <p>Red social</p>
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>Red social</h2>
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/html-5.png" alt="">
                                     <img src="IMG/css.png" alt="">
                                     <img src="IMG/js.png" alt="">
                                 </div>
-                            </div>
-                            <div class="info_proyeto tamaño1">
-                                <p>Simulación de una red social funcional</p>
-                                <button class="btn3"><a href="Paginas/pagina de redes sociales/index.html" target="_blank">Visualizar</a></button>
-                            </div>
-                        </div>
 
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>Simulación de una red social funcional</p>
+
+                                    <button class="btn3"><a href="Paginas/pagina de redes sociales/index.html" target="_blank">Visualizar</a></button>
+                                </div>
+                            </div>  
+                        </div>
                     </article>
 
                     <div class="titulo">
@@ -536,115 +392,131 @@
 
                     <article class="all_proyects" id="P">
                         <div class="item_proyecto item_normal">
-                            <div class="encabezado_item_proyecto">
+                            <div class="front">
                                 <img src="IMG/adivinansas.png" alt="">
-                                <p>Juego de adivinanzas</p>
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>Juego de adivinanzas</h2>
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/html-5.png" alt="">
                                     <img src="IMG/css.png" alt="">
                                     <img src="IMG/js.png" alt="">
                                 </div>
-                            </div>
-                            <div class="info_proyeto tamaño1">
-                                <p>Creado durante un curso en el ITLA.</p>
-                                <button class="btn3"><a href="Paginas/Juego de adivinansas/index.html" target="_blank">Visualizar</a></button>
-                            </div>
+
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>Creado durante un curso en el ITLA.</p>
+
+                                    <button class="btn3"><a href="Paginas/Juego de adivinansas/index.html" target="_blank">Visualizar</a></button>
+                                </div>
+                            </div>  
                         </div>
 
                         <div class="item_proyecto item_normal">
-                            <div class="encabezado_item_proyecto">
+                            <div class="front">
                                 <img src="IMG/maquetado.png" alt="">
-                                <p>Maquetado</p>
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>Maquetado</h2>
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/html-5.png" alt="">
                                     <img src="IMG/css.png" alt="">
                                 </div>
-                            </div>
-                            <div class="info_proyeto tamaño1">
-                                <p>Creado durante el año 2022, en la escuela politécnico nuestra señora de la esperanza.</p>
-                                <button class="btn3"><a href="Paginas/pag1/index.html" target="_blank">Visualizar</a></button>
-                            </div>
+
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>Creado durante el año 2022, en la escuela politécnico nuestra señora de la esperanza.</p>
+
+                                    <button class="btn3"><a href="Paginas/pag1/index.html"
+                                     target="_blank">Visualizar</a></button>
+                                </div>
+                            </div>  
                         </div>
 
                         <div class="item_proyecto item_normal">
-                            <div class="encabezado_item_proyecto">
+                            <div class="front">
                                 <img src="IMG/sistema_F.png" alt="">
-                                <p>Sistema de farmacia</p>
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>Sistema de farmacia</h2>
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/VB.png" alt="">
                                     <img src="IMG/mysql3.png" alt="">
                                 </div>
-                            </div>
-                            <div class="info_proyeto tamaño1">
-                                <p>Desarrollé este sistema optimizar la gestión de inventario, ventas y otras operaciones en farmacias. Si deseas conocer más detalles, ¡no dudes en contactarme!</p>
+
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>Desarrollé este sistema optimizar la gestión de inventario, ventas y otras operaciones en farmacias. Si deseas conocer más detalles, ¡no dudes en contactarme!</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="item_proyecto item_normal">
-                            <div class="encabezado_item_proyecto">
+                            <div class="front">
                                 <img src="IMG/RRHH.png" alt="">
-                                <p>Sistema de recursos humanos</p>
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>Sistema de recursos humanos</h2>
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/VB.png" alt="">
                                     <img src="IMG/access.png" alt="">
                                 </div>
-                            </div>
-                            <div class="info_proyeto tamaño1">
-                                <p>Desarrollé este sistema optimizar la gestión de empleados, renumeración y otras operaciones de recursos humanos. Si deseas conocer más detalles, ¡no dudes en contactarme!</p>
+
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>Desarrollé este sistema optimizar la gestión de empleados, renumeración y otras operaciones de recursos humanos. Si deseas conocer más detalles, ¡no dudes en contactarme!.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="item_proyecto item_normal">
-                            <div class="encabezado_item_proyecto">
+                            <div class="front">
                                 <img src="IMG/Sistema_Escolar.png" alt="">
-                                <p>Sistema Escolar</p>
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>Sistema Escolar</h2>
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/VB.png" alt="">
                                     <img src="IMG/access.png" alt="">
                                 </div>
-                            </div>
-                            <div class="info_proyeto tamaño1">
-                                <p>Desarrollé este sistema optimizar la gestión de estudiantes, calificaciones , profesores , merito y otras operaciones escolares. Si deseas conocer más detalles, ¡no dudes en contactarme!</p>
+
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>Desarrollé este sistema optimizar la gestión de estudiantes, calificaciones , profesores , merito y otras operaciones escolares. Si deseas conocer más detalles, ¡no dudes en contactarme!.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="item_proyecto item_normal">
-                            <div class="encabezado_item_proyecto">
+                            <div class="front">
                                 <img src="IMG/app_simulacion.png" alt="">
-                                <p>APP Web simulación</p>
                             </div>
 
-                            <div class="controles">
-                                <button class="btn3" id="detalle_btn_item_proyecto">Ver detalles</button>
+                            <div class="back">
+                                <h2>APP Web simulaciónr</h2>
+                                <h4>Lenguajes</h4>
                                 <div class="lenguajes">
                                     <img src="IMG/html-5.png" alt="">
                                     <img src="IMG/css.png" alt="">
                                     <img src="IMG/js.png" alt="">
                                 </div>
-                            </div>
-                            <div class="info_proyeto tamaño1">
-                                <p>Completamente funcional con js actuando como si fuera un lenguaje para base de datos.</p>
-                                <button class="btn3"><a href="Paginas/app web simulacion/index.html" target="_blank">Visualizar</a></button>
+
+                                <h4>Detalles</h4>
+                                <div class="info_proyeto">
+                                    <p>DCompletamente funcional con js actuando como si fuera un lenguaje para base de datos.</p>
+
+                                    <button class="btn3"><a href="Paginas/app web simulacion/index.html" target="_blank">Visualizar</a></button>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -665,7 +537,7 @@
                     </article>
 
                     <article class="lita_documentos">
-                        <table >
+                        <table>
                             <thead>
                                 <tr>
                                     <th>Nombre del archivo</th>
@@ -685,19 +557,62 @@
                         </table>
                     </article>
                 </section>
+
+                 <!--== contenedor_de_configuracion ==-->
+                <section class="configuration_container none" id="configuration_container">
+                    <article class="header">
+                        <h2>Configuración del portafolio</h2>
+                        <hr>
+                    </article>
+
+                    <article class="home_container">
+                        <h2>Fonde de pantalla de inicio</h2>
+                        <div class="home_subcontainer" id="fondo_contenedor">
+                            <div class="img"><img src="IMG/fondo4_portafolio.jpg" alt="img_fondo_inicio"></div>
+                            <div class="img"><img src="IMG/fondo6_portafolio.jpg" alt="img_fondo_inicio"></div>
+                            <div class="img"><img src="IMG/fondo3_portafolio.jpg" alt="img_fondo_inicio"></div>
+                            <div class="img"><img src="IMG/fondo2_portafolio.jpeg" alt="img_fondo_inicio"></div>
+                            <div class="img"><img src="IMG/fondo7_portafolio.jpg" alt="img_fondo_inicio"></div>
+                            <div class="img"><img src="IMG/fondo1_portafolio.jpeg" alt="img_fondo_inicio"></div>
+                        </div>
+                    </article>
+
+                    <article class="themes_container">
+                        <h2>Temas de colores del portafolio</h2>
+                        <div class="themes_subcontainer" id="contenedor_temas">
+                            <span class="select_color"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </article>
+
+                    <article class="movimiento_container">
+                        <h2>Tipo de movimiento</h2>
+                        <div class="movimiento_subcontainer" id="contenedor_movimiento">
+                            <span class="select_color" onclick="cambio_movimiento(1)"><span></span></span>
+                            <span onclick="cambio_movimiento(2)"><span></span></span>
+                            <span onclick="cambio_movimiento(3)"><span></span></span>
+                            <span onclick="cambio_movimiento(4)"><span></span></span>
+                        </div>
+                    </article>
+                </section>
+                <!--== fin contenedor_de_configuracion ==-->
             </div>
         </div>
     </main>
     <!--== fin main ==-->
 
     <!--== JS ==-->
-    <script src="JS/configuration.js"></script>
     <script src="JS/card_proyecto.js"></script>
+    <script src="JS/sobre_mi.js"></script>
     <script src="JS/colores.js"></script>
-    <script src="JS/fondo.js"></script>
-    <script src="JS/movimiento_frm.js"></script>
     <script src="JS/animaciones.js"></script>
-
+    <script src="JS/fondo.js"></script>
+    <script src="JS/configuration.js"></script>
+    <script src="JS/movimiento_frm.js"></script>
 </body>
 
 </html>
