@@ -57,12 +57,14 @@
 }
 
 .home > .pages{
-   width: 40%;
+   width: max-content;
+   max-width: 50%;
    height: auto;
    position: relative;
-   display: grid;
-   grid-template-columns: repeat(3 , minmax(auto , 1fr));
-   justify-content: space-between;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: start;
    gap: 30px;
 
    > .item_page{
@@ -71,40 +73,57 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 200ms linear;
-    padding: 5px;
+    transition: all 150ms linear;
+    padding: 3px 7px;
     color: white;
     text-shadow: 0px 0px 15px black;
+    border: 4px solid transparent;
+    width: max-content;
+    background: var(--color1);
+    border-radius: 10px;
 
     > img{
-        background: var(--color1);
         width: 50px;
         aspect-ratio: 1/1;
-        background-size: 50%;
-        padding: 10px;
-        border-radius: 100%;
-        margin-bottom: 10px;
+        object-fit: cover;
     }
 
     > p{
         font-size: 24px;
+        position: absolute;
+        bottom: -70px;
+        padding: 5px;
+        border-radius: 7px;
+        background: var(--color1);
+        width: max-content;
+        transition: all 150ms linear;
+        filter: blur(5px);
+        opacity: 0;
+        pointer-events: none;
     }
    }
 
    > .item_page:hover{
-    transform: scale(1.050);
-    transition: all 200ms linear;
-    background: rgb(197, 190, 190 , 0.5);
-    box-shadow: 5px 5px 5px 4px rgb(197, 190, 190 , 0.8);
+    transform: scale(1.040);
+    transition: all 150ms linear;
+    border-color: var(--color2);
+    box-shadow: 1px 4px 1px var(--color1);
     cursor: pointer;
-
-    border-radius: 5px;
+    border-radius: 7px;
     color: white;
     text-shadow: 0px 0px 5px black;
+
+    > p{
+        bottom: -60px;
+        transition: all 150ms linear;
+        filter: blur(0px);
+        opacity: 1;
+    }
    }
 
    > .item_page:active{
     transform: scale(0.95);
+    box-shadow: 0px 0px 0px var(--color1);
    }
 }
 

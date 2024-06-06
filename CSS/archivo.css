@@ -1,3 +1,35 @@
+.archivo > .header {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px black;
+  background: var(--color3);
+  z-index: 2;
+  transition: all 350ms ease;
+  flex-wrap: wrap;
+  margin-top: 10px;
+
+
+  >.logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-left: 60px;
+
+      >h2 {
+          font-size: 35px;
+          color: white;
+      }
+  }
+}
+
+
 .archivo > .buscador{ 
   width: 100%;
   max-width: 90%;
@@ -20,6 +52,7 @@
 
   > input{
     font-size: 18px;
+    padding: 7px;
   }
 }
 
@@ -74,12 +107,13 @@
 @media screen and (max-width: 586px) {
   .archivo > .buscador{ 
     grid-template-columns: none;
-    grid-template-areas: "texto texto"
-                         "img1 img2";
+    grid-template-areas: "texto"
+                         "img2";
+    gap: 15px;
 
   
     > img{
-      grid-area: img1;
+      display: none;
     }
   
     > input{

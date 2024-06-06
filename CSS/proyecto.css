@@ -17,8 +17,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
     padding: 0px 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
 
     > h3{
         font-size: 40px;
@@ -43,7 +46,7 @@
             border-radius: 5px;
             background: white;
             width: 100%;
-            border: 5px solid var(--color1);
+            border: 3px solid var(--color1);
             max-width: 500px;
         }
 
@@ -92,11 +95,11 @@
     position: relative;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3 , minmax(auto , 1fr));
+    grid-template-columns: repeat(2 , minmax(auto , 1fr));
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 5px;
-    gap: 40px;
+    gap: 20px;
 }
 
 .proyecto > .all_proyects{
@@ -105,11 +108,11 @@
     position: relative;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3 , minmax(auto , 1fr));
+    grid-template-columns: repeat(2 , minmax(auto , 1fr));
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 20px;
-    gap: 40px;
+    gap: 20px;
 }
 
 /* adaptador */
