@@ -1,20 +1,61 @@
 /* animacion de carga */
-let carga_btn = document.getElementById("carga_btn");
-carga_btn.addEventListener("click" , () => {
-    let carga_contenedor = document.querySelector(".carga");
-    carga_contenedor.style.height= "100vh";
-    carga_contenedor.style.opacity= "1";
+setTimeout(() => {
+    let contenedor_carga = document.querySelector(".contenedor_carga");
+    contenedor_carga.style.display = "none";  
+}, 6200);    
 
-    let container_all_modulus = document.querySelector(".container_all_modulus");
-    setTimeout(() => {
-        container_all_modulus.style.opacity= "0";
-        setTimeout(() => {
-            container_all_modulus.style.opacity= "1";   
-        }, 3500);
-    }, 1000);
 
-    setTimeout(() => {
-        carga_contenedor.style.height= "0px";
-        carga_contenedor.style.opacity= "0";
-    }, 4000);
+setTimeout(() => {
+    let pages = document.getElementById("pages");
+    pages.children[1].click();
+}, 8000);
+
+/* actualizar la pagina */
+let btn_actualizar = document.getElementById("btn_actualizar");
+btn_actualizar.addEventListener("click" , () => {
+    location.reload();
 });
+
+/* animacion de movimiento del menu vertical */
+let btn_desplazamiento_menu = document.getElementById("btn_desplazamiento_menu");
+btn_desplazamiento_menu.addEventListener("click" , () => {
+    let header = document.querySelector("header");
+    header.classList.toggle("ani_ancho");
+
+    let btn_desplazamiento_menu2 = document.getElementById("btn_desplazamiento_menu2");
+    btn_desplazamiento_menu2.classList.remove("oculto_ani_btn_menu");
+});
+
+let btn_desplazamiento_menu2 = document.getElementById("btn_desplazamiento_menu2");
+btn_desplazamiento_menu2.addEventListener("click" , () => {
+    let header = document.querySelector("header");
+    header.classList.toggle("ani_ancho");
+
+    let btn_desplazamiento_menu2_1 = document.getElementById("btn_desplazamiento_menu2");
+    btn_desplazamiento_menu2_1.classList.add("oculto_ani_btn_menu");
+});
+
+/* animacion de cambio de imagen (boton de musica) */
+let musica = new Audio("../musica_ambiente1.mp3");
+let btn_musica = document.getElementById("btn_musica");
+let click_musica = 2;
+btn_musica.addEventListener("click" , () => {
+    if (click_musica == 1) {
+        btn_musica.classList.add("btn_musica_pause");
+        btn_musica.classList.remove("btn_musica_start");
+        click_musica = 2;
+        musica.pause();
+    } else if (click_musica == 2){
+        btn_musica.classList.add("btn_musica_start");
+        btn_musica.classList.remove("btn_musica_pause");
+        click_musica = 1;
+        musica.play();
+    } 
+});
+
+setTimeout(() => {
+    btn_musica.click();
+}, 8000);
+
+
+

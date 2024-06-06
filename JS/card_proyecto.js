@@ -13,13 +13,13 @@ function card_proyecto() {
     document.addEventListener("keyup" ,(e) => {
         if (e.target.matches("#destacado_input")){
             document.querySelectorAll(".item_destacado").forEach((item) => {
-                item.children[0].children[1].textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()) ? item.classList.remove("foco") : item.classList.add("foco");
+                item.children[1].children[0].textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()) ? item.classList.remove("foco") : item.classList.add("foco");
             });
         }
 
         if (e.target.matches("#proyecto_input")){
             document.querySelectorAll(".item_normal").forEach((item) => {
-                item.children[0].children[1].textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()) ? item.classList.remove("foco") : item.classList.add("foco");
+                item.children[1].children[0].textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()) ? item.classList.remove("foco") : item.classList.add("foco");
             });
         }
     })

@@ -6,7 +6,35 @@ function move_frm() {
     
     for (let i = 0; i < lista_opciones_frm.children.length; i++){
         lista_opciones_frm.children[i].addEventListener("click" , () => {
-            slider_modulus.style.marginLeft = `-${i}00%`;
+            let indicador_movimiento = document.getElementById("indicador_movimiento");
+
+            if (indicador_movimiento.innerHTML == "1"){
+                slider_modulus.style.marginLeft = `-${i}00%`;
+            }  
+
+            if (indicador_movimiento.innerHTML == "2"){
+                slider_modulus.style.marginLeft = `-${i}00%`;
+                slider_modulus.style.transform = "translateY(-150%)";
+                setTimeout(() => {
+                    slider_modulus.style.transform = "translateY(0%)";
+                },500) 
+            }  
+
+            if (indicador_movimiento.innerHTML == "3"){
+                slider_modulus.style.marginLeft = `-${i}00%`;
+                slider_modulus.style.filter = "blur(100px)";
+                setTimeout(() => {
+                    slider_modulus.style.filter = "blur(0px)";
+                },500) 
+            }  
+
+            if (indicador_movimiento.innerHTML == "4"){
+                slider_modulus.style.marginLeft = `-${i}00%`;
+                slider_modulus.style.transform = "translateY(150%)";
+                setTimeout(() => {
+                    slider_modulus.style.transform = "translateY(0%)";
+                },500) 
+            }  
         });
     }
 }
@@ -47,17 +75,23 @@ for(let i = 1; i< pages.children.length; i++){
                 li.classList.remove("tab_animacion2");
             }, 200);
 
-            // luego el contenedor
+            // luego el contenedor (de tal manera que se copia del original y se pegue en el dom).
             texto_frm_seleccionado = texto_frm_seleccionado.replace(" ", "_");
             let frm_seleccionado = document.getElementById(`${texto_frm_seleccionado}`);
             let copia_frm = frm_seleccionado.cloneNode(true);
             copia_frm.id = `${texto_frm_seleccionado}2`;
             slider_modulus.appendChild(copia_frm);
             copia_frm.classList.remove("none");
-            console.log(copia_frm);
+
             if (texto_frm_seleccionado == "Proyectos"){
                 card_proyecto();
+            } else if (texto_frm_seleccionado == "Sobre_Mi") {
+                movimiento_frm();
+                altura_contenedor_area();
+                cerrar_visualizador();
+                mostrar_visualizador();
             }
+
             move_frm();
             li.click();
             eliminar_pestaña();
@@ -77,18 +111,34 @@ function eliminar_pestaña() {
                 let hijo = elemento;
 
                 setTimeout(() => {
-                    let texto = elemento.children[1].innerHTML;
-                    if (lista_opciones_frm2.contains(hijo)) {
-                        lista_opciones_frm2.removeChild(hijo);
-                        texto = texto.replace(" ", "_");
-                        let contenedor = document.getElementById(`${texto}2`);
-                        if (contenedor && contenedor.parentNode) {
-                            contenedor.parentNode.removeChild(contenedor);
+                    if (elemento.children[1].innerHTML == "Configuraciòn"){
+
+                        if (lista_opciones_frm2.contains(hijo)) {
+                            lista_opciones_frm2.removeChild(hijo);
+                            let contenedor = document.getElementById(`configuration_container2`);
+                            if (contenedor && contenedor.parentNode) {
+                                contenedor.parentNode.removeChild(contenedor);
+                            }
+                            inicio_frm_btn.click();
+                            move_frm();
+                            eliminar_pestaña();
                         }
-                        inicio_frm_btn.click();
-                        move_frm();
-                        eliminar_pestaña();
+
+                    } else {
+                        let texto = elemento.children[1].innerHTML;
+                        if (lista_opciones_frm2.contains(hijo)) {
+                            lista_opciones_frm2.removeChild(hijo);
+                            texto = texto.replace(" ", "_");
+                            let contenedor = document.getElementById(`${texto}2`);
+                            if (contenedor && contenedor.parentNode) {
+                                contenedor.parentNode.removeChild(contenedor);
+                            }
+                            inicio_frm_btn.click();
+                            move_frm();
+                            eliminar_pestaña();
+                        }
                     }
+
                 }, 100);
             });
         }
@@ -176,3 +226,47 @@ url_input.addEventListener("keydown" , (e) => {
         }
     }
 });
+
+let btn_configuracion = document.getElementById("btn_configuracion");
+btn_configuracion.addEventListener("click" , () => {
+    /* funcionalidad para el boton de buscar */
+    let texto_frm_seleccionado = "configuration_container";
+    // primero crear la pestaña
+    let li = document.createElement("li");
+    let p = document.createElement("p");
+    let img1 = document.createElement("img");
+    let img2 = document.createElement("img");
+
+    li.title = "Configuraciòn";
+    p.innerHTML = "Configuraciòn";
+    img1.src = `IMG/configuracion.png`;
+    img2.src = "IMG/x.png";
+
+    li.append(img1 , p , img2);
+    li.classList.add("tab_animacion1");
+    opciones_pestañas.appendChild(li);
+    setTimeout(() => {
+        li.classList.remove("tab_animacion1");
+    }, 200);
+    setTimeout(() => {
+        li.classList.remove("tab_animacion2");
+    }, 200);
+
+    // luego el contenedor (de tal manera que se copia del original y se pegue en el dom).
+    let frm_seleccionado = document.getElementById(`${texto_frm_seleccionado}`);
+    let copia_frm = frm_seleccionado.cloneNode(true);
+    copia_frm.id = `${texto_frm_seleccionado}2`;
+    slider_modulus.appendChild(copia_frm);
+    copia_frm.classList.remove("none");
+    console.log(copia_frm);
+
+
+    move_frm();
+    li.click();
+    eliminar_pestaña();
+
+    contenedor_temas();
+    cambio_fondo();
+    marcador_configuracion();
+});
+
