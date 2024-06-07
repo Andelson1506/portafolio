@@ -36,25 +36,26 @@ btn_desplazamiento_menu2.addEventListener("click" , () => {
 });
 
 /* animacion de cambio de imagen (boton de musica) */
-let musica = new Audio("../musica_ambiente1.mp3");
 let btn_musica = document.getElementById("btn_musica");
 let click_musica = 2;
+let video = document.getElementById('musica');
+
 btn_musica.addEventListener("click" , () => {
     if (click_musica == 1) {
         btn_musica.classList.add("btn_musica_pause");
         btn_musica.classList.remove("btn_musica_start");
         click_musica = 2;
-        musica.pause();
+        video.pause();
     } else if (click_musica == 2){
         btn_musica.classList.add("btn_musica_start");
         btn_musica.classList.remove("btn_musica_pause");
         click_musica = 1;
-        musica.play();
+        video.play();
     } 
 });
 
 setTimeout(() => {
-    btn_musica.click();
+  btn_musica.click();
 }, 8000);
 
 
