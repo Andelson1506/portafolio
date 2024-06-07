@@ -54,3 +54,7 @@ btn_musica.addEventListener("click" , () => {
     } 
 });
 
+setTimeout(() => {
+    btn_musica.click();
+}, 8000);
+
